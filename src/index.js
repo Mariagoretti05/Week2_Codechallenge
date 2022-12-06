@@ -11,3 +11,16 @@ function getAnimals() {
   function menuBarDisplay(animal) {
     animal.forEach(menubar);
   }
+
+  function menubar(character) {
+    const bar = document.querySelector("#character-bar");
+    const span = document.createElement("span");
+    span.innerHTML = character.name;
+    bar.appendChild(span);
+    span.style.cursor = "pointer";
+    span.addEventListener("click", () => {
+      currentAnimal = character;
+      showAnimal(character);
+    });
+  }
+
