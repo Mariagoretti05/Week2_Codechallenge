@@ -8,3 +8,6 @@ function getAnimals() {
       .then(menuBarDisplay);
   }
 
+  function menuBarDisplay(animal) {
+    animal.forEach(menubar);
+  }
