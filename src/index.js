@@ -24,3 +24,11 @@ function getAnimals() {
     });
   }
 
+  function showAnimal(character) {
+    const characterName = document.querySelector("p#name");
+    characterName.innerHTML = character.name;
+    const characterImg = document.querySelector("img#image");
+    characterImg.src = character.image;
+    const characterVotes = document.querySelector("span#vote-count");
+    characterVotes.innerHTML = character.votes;
+  }
